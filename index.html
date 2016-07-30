@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>睿屋首页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="./css/nctouch_products_list.css">
+<link rel="stylesheet" type="text/css" href="./css/nctouch_common.css">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/index.min.css">
+<style>
+ .index-container {
+        width: 100%;
+        height: 100%;
+    }
+    .index-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+	.header-top{height:50px;background:#D9434E;top:0px;z-index:999999;}
+	.header-top .hd-box{position:relative;max-width:640px}
+	.header-top form{margin-left:27%;overflow:hidden;float:left;width:50%}
+	.logo{position:absolute;left:8%;margin: 5px;}
+	.header-top .f1{width:100%;overflow:hidden;border-radius:4px;height:40px;margin-top:5px;border:0px;background:#fff;}
+	.header-top .xiaoxi{position:absolute;right:5%;top:5%;}
+	.go-top{position: fixed;bottom:60px;right: 20px;width: 46px;z-index: 999;}
+	.go-top a{display: block;width: 46px;height: 46px;margin-bottom:0px;background-image: url(images/fanhui.png);}
+	.go-top a:last-child{margin-bottom: 10px;}
+</style>
+</head>
+<body>
+<header class="main">
+<div class="header-top">
+<div class="hd-box">
+<span class="logo">
+<img src="images/home_logo.png" height="40px"/>
+</span>
+<form>
+	<div class="f1">
+		<input type="text" style="width:80%;float:left;height:30px;border:0px;margin-top:5px;color:#ccc;text-indent:20px;" value="" id="keyword" placeholder="输入关键词语"//>
+	</div>
+</form>
+<a href="tmpl/search.html"><img src="images/ser.png" width="35px;" style=" position: absolute;right: 8%;margin-top:10px;"/></a>
+
+</div>
+</div>
+ <!-- index -->
+    <div class="index-container">
+        <div class="index-wrapper">
+		 <div class="index-slide"><img src="images/top-slider4.jpg" width="100%"/></div>
+			  <div class="index-slide"><img src="images/top-slider5.jpg" width="100%"/></div>
+            <div class="index-slide"><img src="images/top-slider1.jpg" width="100%"/></div>
+            <div class="index-slide"><img src="images/top-slider2.jpg" width="100%"/></div>
+            <div class="index-slide"><img src="images/top-slider3.jpg" width="100%"/></div>
+			
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="index-pagination"></div>
+    </div>
+
+    <!-- index JS -->
+    <script src="js/index.min.js"></script>
+
+    <!-- Initialize index -->
+    <script>
+    var index = new index('.index-container', {
+        pagination: '.index-pagination',
+        paginationClickable: true
+    });
+    </script>
+
+<style type="text/css">
+/*页面固定宽度*/
+.fixed-Width { min-width: 320px; max-width: 640px; margin: 0 auto;}
+.nctouch-home-nav { background-color: #FFF; position: relative; z-index: 0; border-bottom: solid 0.05rem #EEE;}
+.nctouch-home-nav ul { font-size: 0;overflow: hidden;}
+.nctouch-home-nav li { float: left; width: 25%; height: 4.7rem; padding: 0.5rem 0 0.3rem 0;}
+.nctouch-home-nav li a { display: block; text-align: center;}
+.nctouch-home-nav li span { display: inline-block; width: 2.4rem; height: 2.4rem; margin: 0 auto 0.3rem auto; border-radius: 100%;}
+.nctouch-home-nav li:nth-child(2) span {}
+.nctouch-home-nav li:nth-child(3) span {}
+.nctouch-home-nav li:nth-child(4) span {}
+.nctouch-home-nav li:nth-child(5) span { background-color: #FF9300;}
+.nctouch-home-nav li:nth-child(6) span { background-color: #62BA1E;}
+.nctouch-home-nav li:nth-child(7) span { background-color: #1A8DE5;}
+.nctouch-home-nav li:nth-child(8) span { background-color: #EC87BF;}
+.nctouch-home-nav li span i { display: block; width: 100%; height: 100%;  background-repeat: no-repeat; background-size: 50%;}
+.nctouch-home-nav li:nth-child(1) span i { width:90px; height:90px; background-image: url(browse_list_w.png);}
+.nctouch-home-nav li:nth-child(2) span i { width:90px; height:90px; background-image: url(cw.png);}
+.nctouch-home-nav li:nth-child(3) span i {width:90px; height:90px; background-image: url(ew.png);}
+.nctouch-home-nav li:nth-child(4) span i { width:90px; height:90px; background-image: url(qqw.png);}
+.nctouch-home-nav li:nth-child(5) span i { background-image: url(http://www.yuxinou.cn/wap/images/member_w.png);}
+.nctouch-home-nav li:nth-child(6) span i { background-image: url(http://www.yuxinou.cn/wap/images/mcc_07_w.png);}
+.nctouch-home-nav li:nth-child(7) span i { background-image: url(http://www.yuxinou.cn/wap/images/mcc_06_w.png);}
+.nctouch-home-nav li:nth-child(8) span i { background-image: url(http://www.yuxinou.cn/wap/images/goods-browse_w.png);}
+.nctouch-home-nav li p { display: block; font-size: 0.6rem; line-height: 0.9rem; color: #555;}
+
+
+.nctouch-home-layout { display: block; max-width: 640px; margin: 0 auto; overflow: hidden; position: relative; z-index: 0; }
+.nctouch-home-block { width: 100%; clear: both;}
+.nctouch-home-block .tit-bar { border-left: solid 0.15rem #ED5564; height: 0.8rem; margin: 0.5rem 0 0.5rem 0.3rem; padding-left: 0.3rem;  font-size: 0.7rem; line-height: 0.8rem;}
+.nctouch-home-block .content { display: block;}
+.item-goods ul.goods-list { font-size: 0; margin-bottom: 0.5rem;}
+.item-goods ul.goods-list li { position:relative; background-color: #FFF; vertical-align: top; display: inline-block; width: 47%; overflow: hidden; border-radius: 0.2rem;}
+.item-goods ul.goods-list li:nth-child(odd) { margin: 0.5rem 1% 0 2%;}
+.item-goods ul.goods-list li:nth-child(even) { margin: 0.5rem 2% 0 1%;}
+.item-goods ul.goods-list li a { display: block;}
+.item-goods ul.goods-list li .goods-pic { width: 100%;}
+.item-goods ul.goods-list li .goods-pic img { width: 100%;}
+.item-goods ul.goods-list li dl { padding: 0.2rem;}
+.item-goods ul.goods-list li dt.goods-name { display: block; font-size: 0.65rem; line-height: 0.8rem; color: #000; height: 1.6rem; overflow: hidden;}
+.item-goods ul.goods-list li dd.goods-price { display: block; font-size: 0.55rem; line-height: 1rem; height: 1rem; margin-top: 0.4rem; padding-top: 0.4rem; color: #DB4453; border-top: solid 0.05rem #EEE;}
+.item-goods ul.goods-list li dd.goods-price em { font-size: 0.7rem; font-weight: 600;}
+.item-goods ul.goods-list i div{background: #f54246; font-size: 16px; width: 104px; height: 42px; position: absolute; color: #fff; top: -10px; left: -40px; z-index: 3; text-align: center; line-height: 62px; overflow: hidden; -webkit-transform: rotate(-45deg);}
+</style>
+
+
+
+</header>
+<!-- content
+-->
+<div class="main" id="main-tmp">
+
+<div class="goods-search-list-nav">
+    <ul id="nav_ul">
+      <li><a href="javascript:void(0);" class="current" id="sort_default">区域<i></i></a></li>
+      <li><a href="javascript:void(0);" class="" id="price">价格<i></i></a></li>
+	  <li><a href="javascript:void(0);" class="" id="house">户型<i></i></a></li>
+      <li><a href="javascript:void(0);" id="search_adv">更多<i></i></a></li>
+    </ul>
+</div>
+
+<div class="adv_list" id="lunbo">
+		<div class="swipe-wrap" style="    width: 1920px;">
+		
+			<div class="item">
+				<a href="">
+					<img src="./images/list-slider1.jpg" alt="">
+				</a>
+			</div>
+				<div class="item">
+				<a href="">
+					<img src="./images/list-slider2.jpg" alt="">
+				</a>
+			</div>
+				<div class="item">
+				<a href="">
+					<img src="./images/list-slider3.jpg" alt="">
+				</a>
+			</div>
+	
+		</div>
+	</div>
+
+<div class="list-title" id="tuijian">
+<img src="./images/like.png" style=" margin-bottom: -5px;height: 22px;">
+猜你喜欢
+</div>
+<!--
+<ul class="list-ul">
+<li>
+<a href="details.html">
+<div class="list-img">
+	<img src="./images/120x120.jpg" />
+	
+</div>
+<div class="list-desc">
+<div class="title">
+	中海天悦府 
+	<span >8000</span>元/平方米
+	</div>
+<p >
+<img src="./images/location.png" style="margin-bottom: -1px;height: 12px;">
+济南高新区</p>
+<p>映秀路与舜华路交汇处，奥体东侧</p>
+<div class="tag">
+	<span > 普通住宅</span>
+	<span > 普通住宅</span>
+</div>
+
+</div>
+</a>
+</li>
+
+<li >
+<a href="details.html">
+<div class="list-img">
+	<img src="./images/120x120.jpg" />
+	
+</div>
+<div class="list-desc">
+<div class="title">
+	中海天悦府 
+	<span >8000</span>元/平方米
+	</div>
+<p >
+<img src="./images/location.png" style="margin-bottom: -1px;height: 12px;">
+济南高新区</p>
+<p>映秀路与舜华路交汇处，奥体东侧</p>
+<div class="tag">
+	<span > 普通住宅</span>
+	<span > 普通住宅</span>
+</div>
+
+</div>
+</a>
+</li>
+<li >
+<a href="details.html">
+<div class="list-img">
+	<img src="./images/120x120.jpg" />
+	
+</div>
+<div class="list-desc">
+<div class="title">
+	中海天悦府 
+	<span >8000</span>元/平方米
+	</div>
+<p >
+<img src="./images/location.png" style="margin-bottom: -1px;height: 12px;">
+济南高新区</p>
+<p>映秀路与舜华路交汇处，奥体东侧</p>
+<div class="tag">
+	<span > 普通住宅</span>
+	<span > 普通住宅</span>
+</div>
+
+</div>
+</a>
+</li>
+
+
+</ul>
+-->
+<div id="liebiao-o"></div>
+
+
+<div class="more-btn">
+	<a href="javascript:()">查看更多</a>
+</div>
+
+<div class="list-title">
+<img src="./images/baike.png"  style=" margin-bottom: -10px;height: 30px;">
+房产百科
+</div>
+<ul class="quick">
+<li >
+<a href="http://m.fang.com/zhishi/">
+<div class="ques"></div>
+问答
+</a>
+</li>
+<li >
+<a href="javascript:()">
+<div class="know"></div>
+知识
+</a>
+</li>
+<li >
+<a href="javascript:()">
+<div class="daikuan"></div>
+我要贷款
+</a>
+</li>
+<li >
+<a href="http://m.xjumc.com/">
+<div class="jisuan"></div>
+房贷计算
+</a>
+</li>
+
+</ul>
+</div>
+  
+<div id="sort_inner" class="goods-sort-inner hide" style="    top: 19.8rem;">
+ <span><a href="javascript:void(0);" class="cur"  onclick="init_get_list('', '')">二环以内<i></i></a></span> 
+ <span><a href="javascript:void(0);" onClick="init_get_list('2', '3')">二环以外<i></i></a></span> 
+ <span><a href="javascript:void(0);" onClick="init_get_list('1', '3')">高新区<i></i></a></span> 
+ <span><a href="javascript:void(0);" onClick="init_get_list('2', '2')">南部山区<i></i></a></span> 
+ </div>
+ <div id="price_inner" class="goods-sort-inner hide" style="    top: 19.8rem;">
+ <span><a href="javascript:void(0);" class="cur"  onclick="init_get_list('', '')">从高到低<i></i></a></span> 
+ <span><a href="javascript:void(0);" onClick="init_get_list('2', '3')">从低到高<i></i></a></span> 
+ </div>
+ <div id="house_inner" class="goods-sort-inner hide" style="    top: 19.8rem;">
+ <span><a href="javascript:void(0);" class="cur"  onclick="init_get_list('', '')">三室一厅<i></i></a></span> 
+ <span><a href="javascript:void(0);" onClick="init_get_list('2', '3')">三室二厅<i></i></a></span> 
+ <span><a href="javascript:void(0);" onClick="init_get_list('1', '3')">二室一厅<i></i></a></span> 
+ <span><a href="javascript:void(0);" onClick="init_get_list('2', '2')">一室一厅<i></i></a></span> 
+ </div>
+
+<div class="main" id="main-container">
+</div>
+<footer id="footer"></footer>
+ 
+<script type="text/html" id="goods">
+	<% if (title) { %>
+		<div class="title"><%= title %></div>
+	<% } %>
+		<ul class="list-ul" id="liebiao">
+		<% for (var i in item) { %>
+			<li>
+				<a href="tmpl/product_detail.html?goods_id=<%= item[i].goods_id %>">
+					<div class="list-img">
+						<img src="<%= item[i].goods_image %>" />
+	                </div>
+					<div class="list-desc">
+						<div class="title">
+							<%= item[i].goods_name %> 
+							<span ><%= item[i].goods_promotion_price %></span>元/平方米
+						</div>
+						<p >
+						<img src="./images/location.png" style="margin-bottom: -1px;height: 12px;">
+						济南</p>
+						<p><%= item[i].goods_jingle %></p>
+						
+						<div class="tag">
+							<span ><%= item[i].goods_serial %></span>
+							<span > 普通住宅</span>
+						</div>
+
+					</div>
+
+				</a>
+			</li>
+		<% } %>
+		</ul>
+
+</script>
+<script type="text/html" id="adv_list">
+	<div class="adv_list">
+		<div class="swipe-wrap">
+		<% for (var i in item) { %>
+			<div class="item">
+				<a href="<%= item[i].url %>">
+					<img src="<%= item[i].image %>" alt="">
+				</a>
+			</div>
+		<% } %>
+		</div>
+	</div>
+</script>
+<script type="text/html" id="home1">
+	<div class="index_block home1">
+	<% if (title) { %>
+		<div class="title"><%= title %></div>
+	<% } %>
+		<div class="content">
+			<div class="item">
+				<a href="<%= url %>">
+					<img src="<%= image %>" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+</script>
+<script type="text/html" id="home2">
+	<div class="index_block home2">
+	<% if (title) { %>
+		<div class="title"><%= title %></div>
+	<% } %>
+		<div class="content">
+			<div class="item home2_1">
+				<a href="<%= square_url %>"><img src="<%= square_image %>" alt=""></a>
+			</div>
+			<div class="item home2_2">
+				<div class="border-left">
+					<div class="border-bottom">
+						<a href="<%= rectangle1_url %>"><img src="<%= rectangle1_image %>" alt=""></a>
+					</div>
+					<div>
+						<a href="<%= rectangle2_url %>"><img src="<%= rectangle2_image %>" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+<script type="text/html" id="home3">
+	<div class="index_block home3">
+	<% if (title) { %>
+		<div class="title"><%= title %></div>
+	<% } %>
+		<div class="content">
+		<% for (var i in item) { %>
+			<div class="item">
+				<a href="<%= item[i].url %>"><img src="<%= item[i].image %>" alt=""></a>
+			</div>
+		<% } %>
+		</div>
+	</div>
+</script>
+<script type="text/html" id="home4">
+	<div class="index_block home2">
+	<% if (title) { %>
+		<div class="title"><%= title %></div>
+	<% } %>
+		<div class="content">
+			<div class="item home2_2">
+				<div class="border-right">
+					<div class="border-bottom">
+						<a href="<%= rectangle1_url %>"><img src="<%= rectangle1_image %>" alt=""></a>
+					</div>
+					<div>
+						<a href="<%= rectangle2_url %>"><img src="<%= rectangle2_image %>" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="item home2_1">
+				<a href="<%= square_url %>"><img src="<%= square_image %>" alt=""></a>
+			</div>
+		</div>
+	</div>
+</script>
+
+<script type="text/html" id="original_goods">
+	<div class="index_block goods">
+	<% if (title) { %>
+		<div class="title"><%= title %></div>
+	<% } %>
+		<div class="content">
+		<% for (var i in item) { %>
+			<div class="goods-item">
+				<a href="tmpl/product_detail.html?goods_id=<%= item[i].goods_id %>">
+					<div class="goods-item-pic"><img src="<%= item[i].goods_image %>" alt=""></div>
+					<div class="goods-item-name"><%= item[i].goods_name %></div>
+					<div class="goods-item-price">￥<%= item[i].goods_promotion_price %></div>
+				</a>
+			</div>
+		<% } %>
+		</div>
+	</div>
+</script>
+
+
+<script type="text/html" id="goods1">
+	<div class="index_block goods">
+	<% if (title) { %>
+		<div class="title"><%= title %></div>
+	<% } %>
+		<div class="content">
+		<% for (var i in item) { %>
+			<div class="goods-item">
+				<a href="tmpl/product_detail.html?goods_id=<%= item[i].goods_id %>">
+					<div class="goods-item-pic"><img src="<%= item[i].goods_image %>" alt=""></div>
+					<div class="goods-item-name"><%= item[i].goods_name %></div>
+					<div class="goods-item-price">￥<%= item[i].goods_promotion_price %></div>
+				</a>
+			</div>
+		<% } %>
+		</div>
+	</div>
+</script>
+<script type="text/html" id="goods2">
+	<div class="index_block goods">
+	<% if (title) { %>
+		<div class="title"><%= title %></div>
+	<% } %>
+		<div class="content">
+		<% for (var i in item) { %>
+			<div class="goods-item">
+				<a href="tmpl/product_detail.html?goods_id=<%= item[i].goods_id %>">
+					<div class="goods-item-pic"><img src="<%= item[i].goods_image %>" alt=""></div>
+					<div class="goods-item-name"><%= item[i].goods_name %></div>
+					<div class="goods-item-price">￥<%= item[i].goods_promotion_price %></div>
+				</a>
+			</div>
+		<% } %>
+		</div>
+	</div>
+</script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/template.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/swipe.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/tmpl/footer.js"></script>
+<script type="text/javascript" src="./js/tmpl/product_list.js"></script>
+<script>
+$(function(){
+	$(window).on('scroll',function(){
+		var st = $(document).scrollTop();
+		if( st>0 ){
+			if( $('#main-container').length != 0  ){
+				var w = $(window).width(),mw = $('#main-container').width();
+				if( (w-mw)/2 > 70 )
+					$('#go-top').css({'left':(w-mw)/2+mw+20});
+				else{
+					$('#go-top').css({'left':'auto'});
+				}
+			}
+			$('#go-top').fadeIn(function(){
+				$(this).removeClass('dn');
+			});
+		}else{
+			$('#go-top').fadeOut(function(){
+				$(this).addClass('dn');
+			});
+		}	
+	});
+	$('#go-top .go').on('click',function(){
+		$('html,body').animate({'scrollTop':0},500);
+	});
+	
+//$('#liebiao').after($('#tuijian'));
+//haven't load #liebiao
+//$("#main-tmp").append($("#liebiao"));
+});
+</script>
+
+</body>
+</html>
